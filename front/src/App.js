@@ -12,11 +12,12 @@ function App() {
     setDomain(event.target.value);
   }
 
-  const handleSubmit = async () => {
 
+  const handleSubmit = async () => {
     try {
-      const dataFromADS = await axios.get(`https://${domain}/ads.txt`)
-      const parseData = await axios.post('http://localhost:5000/parseData', {dataFromADS})
+      const parseData = await axios.post('http://localhost:5000/parseData', { domain })
+      console.log(parseData.data);
+      console.log(Object.keys(parseData.data).length);
       
     } catch (error) { 
 
