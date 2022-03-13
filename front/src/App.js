@@ -38,11 +38,12 @@ function App() {
   
   return (
     <div className="App">
-      <div className='headLine'>ads PARSER APP</div>
-      <div className='input-test'>please provide a content site</div>
-
-      <input className='input' onChange={handleChange} placeholder='www.msn.com for example' />
-      <Button onClick={handleSubmit}>GENERATE INFORMATION</Button>
+      <div className="head">
+        <div className='headLine'>ads PARSER APP</div>
+        <div className='input-test'>please provide a content site</div>
+        <input className='input' onChange={handleChange} placeholder='www.msn.com for example' />
+        <Button className='button' onClick={handleSubmit}>GENERATE INFORMATION</Button>
+      </div>
       <div className='result'>
         {isLoading ? <Spinner animation="border" /> : null}
         { dataFlag ? 

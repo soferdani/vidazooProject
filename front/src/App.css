@@ -1,8 +1,51 @@
 .App {
-
+  display: grid;
+  height: 100vh;
+  grid-template: 
+    "head head head" 20% 
+    "result result result" 80% ;
   text-align: center;
-
+  gap: 10px;
+  margin: 20px;
 }
+
+.head {
+  grid-area: head;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ccc;
+  display: grid;
+  grid-template: 
+    "logo logo logo" 2fr
+    "text text text" 1fr
+    "search search button" 1fr ;
+  gap: 10px 20px;
+}
+
+.input-test {
+  grid-area: text;
+}
+.input {
+  grid-area: search;
+  
+}
+
+.button {
+  grid-area: button;
+}
+
+
+.headLine {
+  grid-area: logo;
+}
+
+
+.result {
+  grid-area: result;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ccc;
+}
+
+
 
 .headLine {
   font-size: 40px;
